@@ -9,17 +9,16 @@
  */
 
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, Text, useColorScheme, View } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar, useColorScheme } from 'react-native';
+import { DashboardView } from './views/dashboard/Dashboard.view';
 
 const App = () => {
 	const isDarkMode = useColorScheme() === 'dark';
 	return (
-		<SafeAreaView>
+		<SafeAreaView style={{ flex: 1 }}>
 			<StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 			<ScrollView contentInsetAdjustmentBehavior="automatic">
-				<View>
-					<Text> Test </Text>
-				</View>
+				<DashboardView />
 			</ScrollView>
 		</SafeAreaView>
 	);
